@@ -14,7 +14,7 @@ public class PlatformMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = 0.2f;
+        float speed = 0.1f;
         if (ToRight)
         {
             transform.position += new Vector3(speed, 0, 0);
