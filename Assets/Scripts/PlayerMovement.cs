@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Camera camera;
+    public Text txtResultado;
     Rigidbody rb; 
     
     // Start is called before the first frame update
@@ -19,11 +20,11 @@ public class PlayerMovement : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, 0);
 
         float movementSpeed = 0.5f;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && transform.position.x > -9)
         {
             transform.Translate(-movementSpeed, 0, 0);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && transform.position.x < 9)
         {
             transform.position += new Vector3(movementSpeed, 0, 0);
         }
@@ -37,8 +38,11 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Colision");
                 rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
                 break;
+            case "DeathPlatform":
+                ShowResult(false);
+                break;
             case "FinalPlatform":
-                Debug.Log("Ganaste");
+                ShowResult(true);
                 break;
             case "Sensor1":
                 Debug.Log("Sensor1");
@@ -52,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
         {
             //case "Sensor1":
             //    Debug.Log("Sensor1");
-            //    ChangeCameraView(0);
+            //    camera.transform.position = new Vector3(0, 0, -25);
             //    break;
             //case "Sensor2":
             //    Debug.Log("Sensor2");
-            //    ChangeCameraView(-10);
+            //    camera.transform.position = new Vector3(0, -10, -25);
             //    break;
             //case "Sensor3":
             //    Debug.Log("Sensor3");
@@ -73,8 +77,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void ChangeCameraView(float YPos)
+    void ShowResult(bool victoria)
     {
-        camera.transform.position = new Vector3(0, YPos, -25);
+        Debug.Log(victoria);
+        txtResultado.text = victoria ? "Ganaste" : "Perdiste";
     }
+    
 }
