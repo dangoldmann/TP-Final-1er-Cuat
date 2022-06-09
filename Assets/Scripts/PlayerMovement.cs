@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Camera camera;
     public Text txtResultado;
     Rigidbody rb; 
     
@@ -54,27 +55,32 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (col.gameObject.name)
         {
-            //case "Sensor1":
-            //    Debug.Log("Sensor1");
-            //    camera.transform.position = new Vector3(0, 0, -25);
-            //    break;
-            //case "Sensor2":
-            //    Debug.Log("Sensor2");
-            //    camera.transform.position = new Vector3(0, -10, -25);
-            //    break;
-            //case "Sensor3":
-            //    Debug.Log("Sensor3");
-            //    ChangeCameraView(-20);
-            //    break;
-            //case "Sensor4":
-            //    Debug.Log("Sensor4");
-            //    ChangeCameraView(-30);
-            //    break;
-            //case "Sensor5":
-            //    Debug.Log("Sensor5");
-            //    ChangeCameraView(-40);
-            //    break;
+            case "Sensor1":
+                Debug.Log("Sensor1");
+                ChangeCameraView(0);
+                break;
+            case "Sensor2":
+                Debug.Log("Sensor2");
+                ChangeCameraView(-10);
+                break;
+            case "Sensor3":
+                Debug.Log("Sensor3");
+                ChangeCameraView(-20);
+                break;
+            case "Sensor4":
+                Debug.Log("Sensor4");
+                ChangeCameraView(-30);
+                break;
+            case "Sensor5":
+                Debug.Log("Sensor5");
+                ChangeCameraView(-40);
+                break;
         }
+    }
+
+    void ChangeCameraView(int YPOS)
+    {
+        camera.transform.position = new Vector3(0, YPOS, -25);
     }
 
     void ShowResult(bool victoria)

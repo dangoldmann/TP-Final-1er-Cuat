@@ -1612,6 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993082b80953f644b8edcd413085a189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   txtResultado: {fileID: 476331665}
 --- !u!54 &932276556
 Rigidbody:
