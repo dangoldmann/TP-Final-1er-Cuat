@@ -26,13 +26,16 @@ public class TimeManager : MonoBehaviour
 
     public void CheckBestScore()
     {
-        if (elapsedTime < bestScore)
+        if (bestScore == 0)
         {
             bestScore = elapsedTime;
         }
+        if(elapsedTime < bestScore)
+        {
+            bestScore = elapsedTime;    
+        }
 
         Debug.Log($"Best score: {bestScore}");
-        Debug.Log(txtBestScore);
         txtBestScore.text = $"Best score: {bestScore}";
     }
 }
