@@ -6,22 +6,26 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource source;
     public AudioClip impactoPlataforma;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //source = GetComponent<AudioSource>();   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioClip victoria;
+    public AudioClip derrota;
 
     public void PlayPlatformImpactSound()
     {
+        source.Stop();
         source.clip = impactoPlataforma;
+        source.Play();
+    }
+
+    public void PlayVictorySound()
+    {
+        source.clip = victoria;
+        source.Play();
+    }
+
+    public void PlayLossSound()
+    {
+        source.Stop();
+        source.clip = derrota;
         source.Play();
     }
 }
