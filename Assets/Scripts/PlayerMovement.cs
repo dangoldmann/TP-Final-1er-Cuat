@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
-{   
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+{
+    public EndGameManager endGameManager;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +20,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && transform.position.x <= 7)
         {
             transform.position += new Vector3(movementSpeed, 0, 0);
+        }
+
+        if(transform.position.y < -110)
+        {
+            endGameManager.EndGame(false);
         }
     }
 

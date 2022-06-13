@@ -7,6 +7,7 @@ public class StartGameManager : MonoBehaviour
     public GameObject secondaryCamera;
     public GameObject restartButton;
     public GameObject panel;
+    public GameObject finalPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -14,11 +15,6 @@ public class StartGameManager : MonoBehaviour
         secondaryCamera.SetActive(false);
         restartButton.SetActive(false);
         panel.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instantiate(finalPlatform);
     }
 }

@@ -8,6 +8,7 @@ public class PlayerCollision : MonoBehaviour
     public AudioManager audioManager;
     public EndGameManager endGame;
     public TimeManager timeManager;
+    public PlatformsHitManager platformsHitManager;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +21,14 @@ public class PlayerCollision : MonoBehaviour
         switch (col.gameObject.name)
         {
             case "Platform":
-                audioManager.PlayPlatformImpactSound();
                 Bounce();
+                float platformNumber = col.gameObject.transform.position.y / (-10) + 1;
+                platformsHitManager.CountPlatformHit(platformNumber);
                 break;
             case "DeathPlatform":
-                audioManager.PlayLossSound();
                 endGame.EndGame(false);
                 break;
-            case "FinalPlatform":
-                audioManager.PlayVictorySound();
+            case "FinalPlatform(Clone)":
                 endGame.EndGame(true);
                 break;
         }
@@ -36,6 +36,7 @@ public class PlayerCollision : MonoBehaviour
 
     void Bounce()
     {
+        audioManager.PlayPlatformImpactSound();
         rb.AddForce(Vector3.up * 20, ForceMode.Impulse);
     }
 }

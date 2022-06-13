@@ -13,6 +13,7 @@ public class EndGameManager : MonoBehaviour
     public GameObject player;
     public TimeManager timeManager;
     public BestScoreManager bestScoreManager;
+    public AudioManager audioManager;
 
     public void EndGame(bool victoria)
     {
@@ -22,14 +23,17 @@ public class EndGameManager : MonoBehaviour
 
         TimeManager.isPlaying = false;
 
-        if (victoria)
+        if (victoria && PlatformsHitManager.allPlatformsHit)
         {
+            player.SetActive(false);
+            audioManager.PlayVictorySound();
             bestScoreManager.CheckBestScore(timeManager.GetLastTime());
             txtResultado.text = "Ganaste";
         }
         else
         {
             player.SetActive(false);
+            audioManager.PlayLossSound();
             txtResultado.text = "Perdiste";
             txtTime.text = "-";
         }
