@@ -79,9 +79,8 @@ public class PlatformsHitManager : MonoBehaviour
 
         txtPlatformsHit.text = $"{totalPlatformsHit}/10";
 
-        if (totalPlatformsHit == 10)
-        {
-            allPlatformsHit = true;
-        }
+
+        allPlatformsHit = totalPlatformsHit == 10;
+        
     }
 }
