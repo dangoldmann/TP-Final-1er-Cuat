@@ -22,43 +22,43 @@ public class PlatformsHitManager : MonoBehaviour
     {
         switch (platformNumber)
         {
-            case 1:
+            case 0:
                 platformsHit[0] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 2:
+            case 1:
                 platformsHit[1] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 3:
+            case 2:
                 platformsHit[2] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 4:
+            case 3:
                 platformsHit[3] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 5:
+            case 4:
                 platformsHit[4] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 6:
+            case 5:
                 platformsHit[5] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 7:
+            case 6:
                 platformsHit[6] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 8:
+            case 7:
                 platformsHit[7] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 9:
+            case 8:
                 platformsHit[8] = 1;
                 UpdateTxtPlatformsHit();
                 break;
-            case 10:
+            case 9:
                 platformsHit[9] = 1;
                 UpdateTxtPlatformsHit();
                 break;

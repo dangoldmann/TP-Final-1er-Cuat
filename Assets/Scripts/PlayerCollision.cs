@@ -22,8 +22,8 @@ public class PlayerCollision : MonoBehaviour
         {
             case "Platform":
                 Bounce();
-                float platformNumber = col.gameObject.transform.position.y / (-10) + 1;
-                platformsHitManager.CountPlatformHit(platformNumber);
+                //float platformNumber = col.gameObject.transform.position.y / (-10) + 1;
+                //platformsHitManager.CountPlatformHit(platformNumber);
                 break;
             case "DeathPlatform":
                 endGame.EndGame(false);
@@ -31,7 +31,28 @@ public class PlayerCollision : MonoBehaviour
             case "FinalPlatform(Clone)":
                 endGame.EndGame(true);
                 break;
+            
         }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        int coinNumber = int.Parse(col.gameObject.name[6].ToString());
+        Debug.Log(coinNumber);
+        Destroy(col.gameObject);
+        switch (col.gameObject.name)
+        {
+            case "Moneda0":
+                platformsHitManager.CountPlatformHit(0);
+                break;
+            case "Moneda0":
+                platformsHitManager.CountPlatformHit(0);
+                break;
+            case "Moneda0":
+                platformsHitManager.CountPlatformHit(0);
+                break;
+        }
+        platformsHitManager.CountPlatformHit(coinNumber);
     }
 
     void Bounce()
