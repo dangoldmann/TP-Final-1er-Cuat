@@ -23,7 +23,7 @@ public class EndGameManager : MonoBehaviour
 
         TimeManager.isPlaying = false;
 
-        if (victoria && PlatformsHitManager.allPlatformsHit)
+        if (victoria && CoinsHitManager.allCoinsHit)
         {
             player.SetActive(false);
             audioManager.PlayVictorySound();

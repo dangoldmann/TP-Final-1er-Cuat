@@ -1,22 +1,9 @@
 fileFormatVersion: 2
-guid: be39086e5b59d3f40bc1368b84e5bae4
+guid: 9e9d9469a41de0340be1602da5aa331c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cube
-    100004: //RootNode
-    100006: Light
-    400000: Camera
-    400002: Cube
-    400004: //RootNode
-    400006: Light
-    2000000: Camera
-    2100000: Paleta8x8
-    2300000: Cube
-    3300000: Cube
-    4300000: Cube
-    10800000: Light
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -54,8 +41,8 @@ ModelImporter:
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -97,7 +84,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

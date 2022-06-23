@@ -8,7 +8,7 @@ public class PlayerCollision : MonoBehaviour
     public AudioManager audioManager;
     public EndGameManager endGame;
     public TimeManager timeManager;
-    public PlatformsHitManager platformsHitManager;
+    public CoinsHitManager coinsHitManager;
 
     // Start is called before the first frame update
     void Start()
@@ -37,22 +37,11 @@ public class PlayerCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        int coinNumber = int.Parse(col.gameObject.name[6].ToString());
-        Debug.Log(coinNumber);
-        Destroy(col.gameObject);
-        switch (col.gameObject.name)
+        if(col.gameObject.name == "Moneda")
         {
-            case "Moneda0":
-                platformsHitManager.CountPlatformHit(0);
-                break;
-            case "Moneda0":
-                platformsHitManager.CountPlatformHit(0);
-                break;
-            case "Moneda0":
-                platformsHitManager.CountPlatformHit(0);
-                break;
+            Destroy(col.gameObject);
+            coinsHitManager.CountCoinHit();
         }
-        platformsHitManager.CountPlatformHit(coinNumber);
     }
 
     void Bounce()

@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: be39086e5b59d3f40bc1368b84e5bae4
+guid: 501bfdcd8fb6e8549b31663d7d00df70
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Camera
     100002: Cube
-    100004: //RootNode
-    100006: Light
+    100004: Light
+    100006: //RootNode
     400000: Camera
     400002: Cube
-    400004: //RootNode
-    400006: Light
+    400004: Light
+    400006: //RootNode
     2000000: Camera
     2100000: Paleta8x8
     2300000: Cube
