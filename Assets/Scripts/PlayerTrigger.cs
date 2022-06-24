@@ -14,6 +14,10 @@ public class PlayerTrigger : MonoBehaviour
                 Destroy(col.gameObject);
                 coinsHitManager.CountCoinHit();
                 break;
+            case "Sensor":
+                Destroy(col.gameObject);
+                CameraMovement.YDestino -= 10;
+                break;
         }
     }
 }
