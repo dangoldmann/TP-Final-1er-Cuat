@@ -3,7 +3,20 @@ guid: 9e9d9469a41de0340be1602da5aa331c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    2186277476908879412: ImportLogs
+    100000: Camera
+    100002: Cubo
+    100004: Light
+    100006: //RootNode
+    400000: Camera
+    400002: Cubo
+    400004: Light
+    400006: //RootNode
+    2000000: Camera
+    2100000: Paleta8x8.006
+    2300000: Cubo
+    3300000: Cubo
+    4300000: Cubo
+    10800000: Light
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -84,7 +97,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

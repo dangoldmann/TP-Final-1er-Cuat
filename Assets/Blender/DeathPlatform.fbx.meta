@@ -3,25 +3,20 @@ guid: 605ff20f4865ec041a58ab6345ac5c62
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cono
-    100004: Cono.001
-    100006: Cono.002
-    100008: Cono.003
-    100010: Cono.004
-    100012: Cubo
-    100014: //RootNode
-    100016: Light
-    400000: Camera
-    400002: Cono
-    400004: Cono.001
-    400006: Cono.002
-    400008: Cono.003
-    400010: Cono.004
-    400012: Cubo
-    400014: //RootNode
-    400016: Light
-    2000000: Camera
+    100000: Cono
+    100002: Cono.001
+    100004: Cono.002
+    100006: Cono.003
+    100008: Cono.004
+    100010: Cubo
+    100012: //RootNode
+    400000: Cono
+    400002: Cono.001
+    400004: Cono.002
+    400006: Cono.003
+    400008: Cono.004
+    400010: Cubo
+    400012: //RootNode
     2100000: Paleta8x8
     2100002: Paleta8x8.001
     2100004: Paleta8x8.002
@@ -46,7 +41,6 @@ ModelImporter:
     4300006: Cono.002
     4300008: Cono.003
     4300010: Cono.004
-    10800000: Light
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -82,10 +76,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

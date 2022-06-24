@@ -3,19 +3,14 @@ guid: d2629719d12c603458eca08dfb35b1f2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Camera
-    100002: Cilindro
-    100004: Esfera
-    100006: Esfera.001
-    100008: Light
-    100010: //RootNode
-    400000: Camera
-    400002: Cilindro
-    400004: Esfera
-    400006: Esfera.001
-    400008: Light
-    400010: //RootNode
-    2000000: Camera
+    100000: Cilindro
+    100002: Esfera
+    100004: Esfera.001
+    100006: //RootNode
+    400000: Cilindro
+    400002: Esfera
+    400004: Esfera.001
+    400006: //RootNode
     2100000: Paleta8x8.003
     2100002: Material.001
     2100004: Paleta8x8.004
@@ -28,7 +23,6 @@ ModelImporter:
     4300000: Cilindro
     4300002: Esfera
     4300004: Esfera.001
-    10800000: Light
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -64,10 +58,10 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
