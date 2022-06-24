@@ -22,13 +22,11 @@ public class PlayerCollision : MonoBehaviour
         {
             case "Platform":
                 Bounce();
-                //float platformNumber = col.gameObject.transform.position.y / (-10) + 1;
-                //platformsHitManager.CountPlatformHit(platformNumber);
                 break;
             case "DeathPlatform":
                 endGame.EndGame(false);
                 break;
-            case "FinalPlatform(Clone)":
+            case "FinalPlatform":
                 endGame.EndGame(true);
                 break;
             

@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.eulerAngles = new Vector3(0, 0, 0);
 
-        float movementSpeed = 0.5f;
+        float movementSpeed = 0.4f;
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= -7)
         {
             transform.Translate(-movementSpeed, 0, 0);
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(movementSpeed, 0, 0);
         }
 
-        if(transform.position.y < -110)
+        if(transform.position.y < -150)
         {
             endGameManager.EndGame(false);
         }
